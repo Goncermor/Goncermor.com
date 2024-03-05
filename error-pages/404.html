@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Goncermor &#x2022; Not Found</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Montserrat:wght@200&display=swap);
+      @font-face {
+        font-family: "Big Space";
+        src: url(https://cdn.goncermor.com/fonts/BigSpace.woff2) format("woff2");
+        font-weight: 400;
+        font-style: normal;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body,
+      html {
+        height: 100%;
+        overflow-x: hidden;
+      }
+      #topbar {
+        position: fixed;
+        height: 60px;
+        width: 100%;
+        background-color: #000;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 60px 1fr;
+        align-items: center;
+        z-index: 999;
+        transition: height 0.6s, background-color 0.6s;
+        backdrop-filter: blur(15px);
+        user-select: none;
+      }
+      #topbar .logo {
+        width: auto;
+        text-decoration: none;
+        margin-left: 15px;
+        font-family: "Big Space";
+        font-size: 36px;
+        line-height: 30px;
+        font-style: italic;
+        color: #fff;
+      }
+      #topbar .logo span:hover::after {
+        content: ".com";
+      }
+      #gradient-canvas {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        --gradient-color-1: #d100c0;
+        --gradient-color-2: #16afc4;
+        --gradient-color-3: #03c087;
+        animation: HueCicle 25s infinite;
+      }
+      @keyframes HueCicle {
+        0% {
+          filter: hue-rotate(0);
+        }
+        50% {
+          filter: hue-rotate(40deg);
+        }
+        100% {
+          filter: hue-rotate(0);
+        }
+      }
+      .content-container {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        z-index: 1;
+        color: #fff;
+        text-shadow: #000 2px 2px 10px;
+        transition: opacity 0.6s;
+      }
+      .content {
+        width: 50%;
+      }
+      .content-container .code {
+        font-size: 92px;
+        line-height: 64px;
+        font-family: Kanit;
+      }
+      .content-container p {
+        font-size: 48px;
+        font-family: Kanit;
+      }
+      .content-container .home {
+        font-size: 24px;
+        margin-top: 10px;
+      }
+      .content-container .home a {
+        font-size: 24px;
+        color: #00d9ff;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="topbar">
+      <a href="http://goncermor.com" class="logo"><span>Goncermor</span></a>
+    </nav>
+    <div class="content-container">
+      <div class="content">
+        <p class="code">404</p>
+        <p>Not Found</p>
+        <p class="home">
+          This page is sipping a digital cocktail on a tropical island. If you
+          miss it, send a postcard and sunscreen.
+          <a href="http://goncermor.com">Go Home.</a>
+        </p>
+      </div>
+    </div>
+    <canvas id="gradient-canvas" data-js-darken-top data-transition-in></canvas>
+    <script type="module">
+      import { Gradient } from "/assets/js/gradient.min.js";
+      const gradient = new Gradient();
+      gradient.initGradient("#gradient-canvas");
+    </script>
+  </body>
+</html>

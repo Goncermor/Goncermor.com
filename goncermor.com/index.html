@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Goncermor</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="script.js" defer></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	</head>
+
+	<body>
+		<nav id="topbar">
+			<a href="https://goncermor.com" class="logo"><span>Goncermor</span></a>
+			<svg id="ham" viewBox="0 0 100 100" onclick="MenuToggle()">
+				<path class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+				<path class="line middle" d="m 30,50 h 40" />
+				<path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+			</svg>
+			<div class="menu-container">
+				<a href="#" class="item1" onclick="MenuToggle(); SetPage('Home');event.preventDefault();"><span>Home</span></a>
+				<a href="#" class="item2" onclick="MenuToggle(); SetPage('About');event.preventDefault();"><span>About</span></a>
+				<a href="#" class="item3" onclick="MenuToggle(); SetPage('Projects');event.preventDefault();"><span>Projects</span></a>
+				<a href="#" class="item4" onclick="MenuToggle(); SetPage('Tools');event.preventDefault();"><span>Tools</span></a>
+			</div>
+		</nav>
+		<canvas id="gradient-canvas" data-js-darken-top data-transition-in></canvas>
+		<script type="module">
+			import { Gradient } from "https://cdn.goncermor.com/js/gradient.min.js";
+			const gradient = new Gradient();
+			gradient.initGradient("#gradient-canvas");
+		</script>
+		<div class="content-container">
+			<div class="content"></div>
+		</div>
+	</body>
+
+</html>
