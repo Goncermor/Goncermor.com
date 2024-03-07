@@ -1,26 +1,40 @@
-if (window.location.hash) SetPage(window.location.hash.replace("#",""));
-else SetPage("home");
+let HamElement, TopbarElement, ContentElement, ContentContainerElement;
 
+document.addEventListener("DOMContentLoaded", (event) => {
+    if (window.location.hash) SetPage(window.location.hash.replace("#",""));
+    else SetPage("home");
 
-$(window).on("popstate", e => {
-    TrnsPage(e.originalEvent.state.id,false);
+    HamElement= document.getElementById('ham');
+    TopbarElement = document.getElementById('topbar');
+    ContentElement = document.querySelector('.content');
+    ContentContainerElement = document.querySelector('.content-container');
+});
+
+window.addEventListener("popstate", (e) => {
+    TrnsPage(e.state.id,false);
 });
 
 function MenuToggle() {
-    $("#ham").toggleClass("active");
-    $("#topbar").toggleClass("active");
+    HamElement.classList.toggle("active");
+    TopbarElement.classList.toggle("active");
 }
 
 function TrnsPage(page,pushstate = true) {
-    $(".content-container").css("opacity", "0");
+    ContentContainerElement.style.opacity = "0";
     setTimeout(SetPage,600,page, pushstate);
-    setTimeout("$(\".content-container\").css(\"opacity\", \"1\")",600);
+    setTimeout("ContentContainerElement.style.opacity = \"1\";",600);
 }
 
 function SetPage(page,pushstate = true) {
     if (pushstate) window.history.pushState({id:page},`${page} • Goncermor`, `#${page}`);
-    $.get(`/pages/${page}.html`, data => {
-        $(".content").html(data);
+
+    fetch(`/pages/${page}.html`)
+    .then(response => response.text())
+    .then(data => {
+      const contentElement = document.querySelector(".content");
+      if (contentElement) {
+        contentElement.innerHTML = data;
+      }
     });
 }
 
