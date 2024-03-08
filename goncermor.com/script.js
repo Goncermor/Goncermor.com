@@ -31,9 +31,9 @@ function SetPage(page,pushstate = true) {
     fetch(`/pages/${page}.html`)
     .then(response => response.text())
     .then(data => {
-      const contentElement = document.querySelector(".content");
-      if (contentElement) {
-        contentElement.innerHTML = data;
+
+      if (ContentElement) {
+        ContentElement.innerHTML = data;
       }
     });
 }
