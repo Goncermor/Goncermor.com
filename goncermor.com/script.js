@@ -28,7 +28,7 @@ function TrnsPage(page,pushstate = true) {
 function SetPage(page,pushstate = true) {
     if (pushstate) window.history.pushState({id:page},`${page} • Goncermor`, `#${page}`);
 
-    fetch(`/pages/${page}.html`)
+    fetch(`pages/${page}.html`)
     .then(response => response.text())
     .then(data => {
 

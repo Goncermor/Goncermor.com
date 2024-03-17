@@ -14,33 +14,33 @@
 		<meta name="author" content="Goncermor">
 		<meta property="og:title" content=Goncermor's Personal Website>
 		<meta property="og:site_name" content=Goncermor.com>
-		<meta property="og:url" content=https://goncermor.com/>
+		<meta property="og:url" content=../goncermor.com />
 		<meta property="og:description" content=My personal website with my tools and projects>
 		<meta property="og:type" content=website>
-		<meta property="og:image" content=https://cdn.goncermor.com/img/svg/g.svg>
+		<meta property="og:image" content=../cdn.goncermor.com/img/svg/g.svg>
 		<title>Goncermor</title>
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="../cdn.goncermor.com/css/base.css" />
 		<script src="script.js" defer></script>
 	</head>
 
 	<body>
 		<nav id="topbar">
-			<a href="https://goncermor.com" class="logo"><span>Goncermor</span></a>
+			<a href="../goncermor.com" class="logo"><span>Goncermor</span></a>
 			<svg id="ham" viewBox="0 0 100 100" onclick="MenuToggle()">
-				<path class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
-				<path class="line middle" d="m 30,50 h 40" />
-				<path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+				<path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+				<path d="m 30,50 h 40" />
+				<path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
 			</svg>
 			<div class="menu-container">
-				<a href="#" class="item1" onclick="MenuToggle(); SetPage('Home');event.preventDefault();"><span>Home</span></a>
-				<a href="#" class="item2" onclick="MenuToggle(); SetPage('About');event.preventDefault();"><span>About</span></a>
-				<a href="#" class="item3" onclick="MenuToggle(); SetPage('Projects');event.preventDefault();"><span>Projects</span></a>
-				<a href="#" class="item4" onclick="MenuToggle(); SetPage('Tools');event.preventDefault();"><span>Tools</span></a>
+				<a href="#" onclick="MenuToggle(); SetPage('Home');event.preventDefault();"><span>Home</span></a>
+				<a href="#" onclick="MenuToggle(); SetPage('About');event.preventDefault();"><span>About</span></a>
+				<a href="#" onclick="MenuToggle(); SetPage('Projects');event.preventDefault();"><span>Projects</span></a>
+				<a href="#" onclick="MenuToggle(); SetPage('Tools');event.preventDefault();"><span>Tools</span></a>
 			</div>
 		</nav>
 		<canvas id="gradient-canvas" data-js-darken-top data-transition-in></canvas>
 		<script type="module">
-			import { Gradient } from "https://cdn.goncermor.com/js/gradient.min.js";
+			import { Gradient } from "../cdn.goncermor.com/js/gradient.min.js";
 			const gradient = new Gradient();
 			gradient.initGradient("#gradient-canvas");
 		</script>
