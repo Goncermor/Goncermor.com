@@ -52,14 +52,11 @@ if (isset($_GET['f'])) {
 	<meta property="og:url" content="https://goncermor.com/">
 	<meta property="og:title" content="<?php echo $filename ?>">
 	<meta property="og:description" content="Link from goncermor.com">
-	<meta property="og:image" content="https://cdn.goncermor.com/img/cdn.png">
 
 	<meta property="twitter:card" content="summary">
 	<meta property="twitter:url" content="https://goncermor.com/">
 	<meta property="twitter:title" content="<?php echo $filename ?>">
 	<meta property="twitter:description" content="Link from goncermor.com">
-	<meta property="twitter:image" content="https://cdn.goncermor.com/img/cdn.png">
-
 
 	<meta name="robots" content="noindex, nofollow">
 	<meta name="author" content="Goncermor">

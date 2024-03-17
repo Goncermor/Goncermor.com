@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Goncermor</title>
     <style>
       @import "https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap";
+
       @font-face {
         font-family: big space;
         src: url(https://cdn.goncermor.com/fonts/BigSpace.woff2) format('woff2');
         font-weight: 400;
         font-style: normal
       }
+
       * {
         margin: 0;
         padding: 0;
       }
+
       :root {
         --accent: #ff0000;
       }
+
       .links {
         display: flex;
         flex-direction: column;
         gap: 15px;
       }
+
       html,
       body {
         height: 100%;
       }
+
       body {
         margin-top: -40px;
         background-color: #141414;
@@ -37,10 +44,12 @@
         flex-direction: column;
         gap: 80px;
       }
+
       a {
         text-decoration: none;
-        
+
       }
+
       button {
         border: 1px solid #2c2c2c;
         width: 180px;
@@ -53,15 +62,18 @@
         align-items: center;
         padding: 10px;
       }
-      button > span {
+
+      button>span {
         width: 100%;
         font-family: 'Kanit';
         font-size: 18px;
       }
+
       button:hover {
         border: 1px solid var(--accent);
         box-shadow: 0 0 8px 0 var(--accent);
       }
+
       img {
         height: 2.2em;
       }
@@ -74,6 +86,7 @@
       }
     </style>
   </head>
+
   <body>
     <div class="title">
       <label>Goncermor</label>
@@ -81,19 +94,20 @@
     <div class="links">
       <a href="http://goncermor.com">
         <button>
-          <img src="https://cdn.goncermor.com/img/svg/g.svg" alt="Goncermor Logo Small"><span>Website</span>
+          <img src="../cdn.goncermor.com/img/svg/g.svg" alt="Goncermor Logo Small"><span>Website</span>
         </button>
       </a>
       <a href="http://github.com/Goncermor">
         <button>
-          <img src="https://cdn.goncermor.com/img/svg/github.svg" alt="Github Logo"><span>Github</span>
+          <img src="../cdn.goncermor.com/img/svg/logos/github.svg" alt="Github Logo"><span>Github</span>
         </button>
       </a>
       <a href="http://www.instagram.com/goncermor/">
         <button>
-          <img src="https://cdn.goncermor.com/img/svg/instagram.svg" alt="Instagam Logo"><span>Instagram</span>
+          <img src="../cdn.goncermor.com/img/svg/logos/instagram.svg" alt="Instagam Logo"><span>Instagram</span>
         </button>
       </a>
     </div>
   </body>
+
 </html>
