@@ -23,12 +23,17 @@
         <link rel="stylesheet" href="../cdn.goncermor.com/css/topbar.css" />
         <style>
             .content {
-                background-color: hsla(0, 0%, 0%, 0.75);
-
+                background-color: rgba(0, 0, 0, 0.75);
+                box-shadow: black 0px 0px 10px 0px;
+                backdrop-filter: blur(4px);
                 border-radius: 15px;
                 width: 400px;
                 height: 250px;
+                display: grid;
+                grid-template-rows: 1fr 60px;
             }
+
+            .content .info {}
         </style>
     </head>
 
@@ -45,6 +50,7 @@
         <div class="content-container">
             <div class="content">
                 <div></div>
+                <div class="info"></div>
             </div>
         </div>
     </body>
